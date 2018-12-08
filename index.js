@@ -45,16 +45,73 @@
 // app.listen(3000, function(){
 //     console.log("Example is running on port 3000");
 // });
+//5545
+// var express = require("express");
+// var app = express();
 
-var express = require("express");
-var app = express();
+// var Square = require("./module");
+// var MySquareObject =  new Square(12);
 
-app.use(express.static("public"));
+// function main(){
+//     console.log(MySquareObject.getArea());
+// }
 
-app.get("/", function(req, res){
-   res.redirect("public/index.html");
-});
+// main();
 
-app.listen(3000, function(){
-   console.log("Example is running on port 3000");
-});
+// app.use(express.static("public"));
+
+// app.get("/", function(req, res){
+//    res.redirect("index.html");
+// });
+
+// app.listen(3000, function(){
+//    console.log("Example is running on port 3000");
+// });
+
+
+// var fs = require("fs");
+// function main (){
+//     fs.writeFile("hello.txt", "Hello World\n", function(err){
+//         console.log("fs.writeFile ended");
+//     });
+//     console.log("fs.writeFile");
+// }
+// main();
+
+// var fs = require("fs");
+// function main (){
+//     fs.writeFileSync("hello.txt", "Hello World\n");
+//     console.log("fs.writeFile");
+// }
+// main();
+
+
+// var fs = require("fs");
+// var dummyText = "Apple yep";
+
+// function main(){
+//     fs.writeFileSync("dummytext.txt", dummyText);
+//     var text = fs.readFileSync("dummytext.txt").toString();
+//     console.log(dummyText == text);
+//     console.log(text);
+//     fs.writeFileSync("undummytext.txt",
+//         text.replace("Apple", "Microsoft")
+//     )
+// }
+
+// main();
+
+var obj = {
+    "first_name": "Rima",
+    "last_name": "Mikayelyan",
+    "age": 16,
+    "tumo_student": true
+}
+
+var myJSON = JSON.stringify(obj);
+console.log(myJSON);
+var fs = require("fs");
+function main(){
+    fs.writeFileSync("obj.json", myJSON);
+}
+main();
